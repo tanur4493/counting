@@ -1,0 +1,9 @@
+<?php 
+                            $count = App\Models\Counts::first();
+                            $c = $count->count+1;
+                            
+                            $updte = App\Models\Counts::find($count->id);
+                            $updte->count = $c;
+                            $updte->save();
+                            ?>
+                            <h2>  <span><b style="color:red">Total Visitor : </b> {{$c}}</span></h2>
